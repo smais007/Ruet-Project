@@ -8,6 +8,10 @@ app.use(cors());
 app.use(express.json());
 app.use(bodyParser.json());
 
+app.get("/", (req, res) => {
+  return res.json({message: "working"})
+})
+
 app.post("/data", (req, res) => {
  const data = req.body;
  console.log(data)
