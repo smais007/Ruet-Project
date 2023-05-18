@@ -6,7 +6,7 @@ from tensorflow.keras.models import load_model
 import requests
 
 def send(fist):
-    requests.post(url='http://localhost:5000/data', json={"data":fist})
+    requests.post(url='http://34.124.156.50:5000/data', json={"data":fist})
 
 
 # initialize mediapipe
