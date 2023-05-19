@@ -6,7 +6,11 @@ from tensorflow.keras.models import load_model
 import requests
 
 def send(fist):
-    requests.post(url='http://34.124.156.50:5000/data', json={"data":fist})
+    print(fist);
+    temp = 'False'
+    if(fist):
+        temp = 'True'
+    requests.post('https://sgdiu.000webhostapp.com/data.php', {'data':'{}'.format(temp)})
 
 
 # initialize mediapipe
